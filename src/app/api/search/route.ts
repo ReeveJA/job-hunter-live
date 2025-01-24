@@ -19,15 +19,15 @@ export async function POST(req: Request) {
     const indeedUrl = `https://www.indeed.com/jobs?q=${encodeURIComponent(
       searchKeywords
     )}&l=${encodeURIComponent(searchLocation)}`;
-    const totalJobsUrl = `https://www.totaljobs.com/jobs/${encodeURIComponent(
-      searchKeywords
-    )}?location=${encodeURIComponent(searchLocation)}`;
+    // const totalJobsUrl = `https://www.totaljobs.com/jobs/${encodeURIComponent(
+    //   searchKeywords
+    // )}?location=${encodeURIComponent(searchLocation)}`;
 
     // Return constructed URLs
     return NextResponse.json({
       linkedIn: linkedInUrl,
       indeed: indeedUrl,
-      totalJobs: totalJobsUrl,
+      // totalJobs: totalJobsUrl,
       
     });
   } catch (error) {
